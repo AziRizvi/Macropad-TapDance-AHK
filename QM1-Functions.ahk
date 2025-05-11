@@ -19,7 +19,7 @@ Open_With_Brave_Beta(TargetURL)
 								
 									WinActivate(WindowTitle)
 									WinMaximize(WindowTitle)
-									Run('"' . BrowserPath . '" ' . TargetURL)
+									Run('"' . BrowserPath . '" --new-tab "' . TargetURL . '"')
 									
 								}
 
@@ -33,7 +33,7 @@ Open_With_Brave_Beta(TargetURL)
 									
 										{
 										
-											Run('"' . BrowserPath . '" ' . TargetURL)
+											Run('"' . BrowserPath . '" "' . TargetURL . '"')
 											WinWait(WindowTitle)
 											WinActivate(WindowTitle)
 											
@@ -47,7 +47,7 @@ Open_With_Brave_Beta(TargetURL)
 										
 											WinActivate(WindowTitle)
 											WinMaximize(WindowTitle)
-											Run('"' . BrowserPath . '" ' . TargetURL)
+											Run('"' . BrowserPath . '" --new-tab "' . TargetURL . '"')
 											
 										}
 									
