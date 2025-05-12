@@ -297,7 +297,7 @@ YourFunction1()
 
 				{
 				
-					Open_With_Brave_Beta("")
+					
 					
 				}
 			
@@ -307,7 +307,7 @@ YourFunction2()
 
 				{
 				
-					Open_With_Brave_Beta("")
+					
 	
 				}			
 
@@ -321,7 +321,7 @@ YourFunction3()
 
 				{
 				
-					Open_With_Brave_Beta("")
+					
 					
 				}
 
@@ -331,7 +331,7 @@ YourFunction4()
 
 				{
 				
-					Open_With_Brave_Beta("")
+					
 					
 				}
 		
@@ -341,7 +341,7 @@ YourFunction5()
 
 				{
 				
-					Open_With_Brave_Beta("")
+					
 					
 				}
 
@@ -467,7 +467,7 @@ YourFunction6()
 
 				{
 				
-					Open_With_Brave_Beta("")
+					
 					
 				}
 				
@@ -477,7 +477,7 @@ YourFunction7()
 
 				{
 				
-					Open_With_Brave_Beta("")
+					
 					
 				}
 
@@ -501,7 +501,7 @@ YourFunction8()
 
 				{
 				
-					Open_With_Brave_Beta("")
+					
 					
 				}
 				
@@ -511,7 +511,7 @@ YourFunction9()
 
 				{
 				
-					Open_With_Brave_Beta("")
+					
 					
 				}
 
@@ -820,8 +820,3 @@ OpenSonarrTVCalender()
 					}
 
 ;; ======================================================================================================================================================================== ;;
-
-
-
-
-
