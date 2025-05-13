@@ -6,54 +6,52 @@
 
 Open_With_Brave_Beta(TargetURL)
 
-						{
-						
-							BrowserPath := "C:\Program Files\BraveSoftware\Brave-Browser-Beta\Application\brave.exe"
-							WindowTitle := "ahk_exe " . BrowserPath
-
-						;; Check If Browser Is Active, If It Is, Run The Specific URL With It.
-						
-							If WinActive(WindowTitle)
-							
-								{
+							{
 								
-									WinActivate(WindowTitle)
-									WinMaximize(WindowTitle)
-									Run('"' . BrowserPath . '" --new-tab "' . TargetURL . '"')
-									
-								}
-
-						;; Check If The Browser Window Doesn't Exist, If It Doesn't, Then Run It With The Specific URL.
-							
-							Else
-							
-								{
+								;; Define The Browser Path and Window Title.	
 								
-									If !WinExist(WindowTitle)
+									BrowserPath := "C:\Program Files\BraveSoftware\Brave-Browser-Beta\Application\brave.exe"
+									WindowTitle := "ahk_exe " . BrowserPath
+								
+									;; If Brave Beta Is Already The Active Window
 									
-										{
+										If WinActive(WindowTitle)
 										
-											Run('"' . BrowserPath . '" "' . TargetURL . '"')
-											WinWait(WindowTitle)
-											WinActivate(WindowTitle)
+											{
 											
-										}
-
-						;; Check If Browser Window Exists, If It Does, Then Activate It And Run The Specific URL.
+												Run('"' . BrowserPath . '" --new-tab "' . TargetURL . '"')
+												Return
+												
+											}
 									
-									Else
-									
-										{
+										;; If Brave Beta Exists But Is Not Active
 										
-											WinActivate(WindowTitle)
-											WinMaximize(WindowTitle)
-											Run('"' . BrowserPath . '" --new-tab "' . TargetURL . '"')
+											If WinExist(WindowTitle)
 											
-										}
-									
-								}
-							
-						}
+												{
+												
+													WinActivate(WindowTitle)
+													WinMaximize(WindowTitle)
+													Run('"' . BrowserPath . '" --new-tab "' . TargetURL . '"')
+													Return
+													
+												}
+								
+										;; If Brave Beta Doesn't Exist, Run It With The Target URL.
+										
+											Else If !WinExist(WindowTitle)
+												
+												{
+												
+													Run('"' . BrowserPath . '" "' . TargetURL . '"')
+													WinWait(WindowTitle)
+													WinActivate(WindowTitle)
+													WinMaximize(WindowTitle)
+													Return
+													
+												}
+				
+							}
 
 ;; ======================================================================================================================================================================== ;;
 ;; ------------------------------------------------------------------------------------------------------;;
