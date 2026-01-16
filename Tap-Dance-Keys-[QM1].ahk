@@ -191,7 +191,7 @@ A_IconTip := "QMK Macropad [QM-1] - Tap Dance.ahk"
         () => OpenAutomatic1111Github(),  																	;; A Quick Double-Tap Opens Anime Corner News FB Page.
     ],
 	[
-		() => OpenForgeUIGithub(),																			;; A Hold Opens ShekhNSons' Facebook Group.
+		() => OpenForgeUIGithub(),																			;; A Hold Opens A Github Page.
 		() => OpenHuggingFace(),																			;; A Tap & Hold Opens Anime Trending FB Page.
 	],, 100
 )
@@ -369,3 +369,4 @@ Esc::
 #HotIf
 
 ;; ======================================================================================================================================================================== ;;
+
